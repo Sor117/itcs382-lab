@@ -4,7 +4,7 @@ public class Parcel {
     private String code;
     private String studentId;
     private Size size;
-    public String status;
+    private String status;
 
     public Parcel(String code, String studentId, Size size) {
         this.code = code;
@@ -23,5 +23,21 @@ public class Parcel {
 
     public Size getSize() {
         return size;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public boolean isStored() {
+        return status.equals("STORED");
+    }
+
+    public void markStored() {
+        status = "STORED";
+    }
+
+    public void markPickedUp() {
+        status = "PICKED_UP";
     }
 }
