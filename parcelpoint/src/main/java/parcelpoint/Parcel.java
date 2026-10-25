@@ -3,10 +3,10 @@ package parcelpoint;
 public class Parcel {
     private String code;
     private String studentId;
-    private int size;          // 1 = small, 2 = medium, 3 = large
+    private Size size;
     public String status;
 
-    public Parcel(String code, String studentId, int size) {
+    public Parcel(String code, String studentId, Size size) {
         this.code = code;
         this.studentId = studentId;
         this.size = size;
@@ -21,7 +21,7 @@ public class Parcel {
         return studentId;
     }
 
-    public int getSize() {
+    public Size getSize() {
         return size;
     }
 }
